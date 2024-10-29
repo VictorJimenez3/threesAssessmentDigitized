@@ -1,0 +1,100 @@
+/*
+Programmed by: Umair Usmani
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center; /* Center the text */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background-color: black; /* Black background */
+    color: white; /* White text color */
+}
+
+.header {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space items evenly */
+    padding: 20px; /* Space around the header */
+}
+
+.logo-container {
+    display: flex; /* Flex for logos alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space logos and title evenly */
+    width: 100%; /* Take full width */
+}
+
+.left-logos {
+    display: flex; /* Align logos to the left */
+}
+
+.logo {
+    width: 100px; /* Fixed width for logos */
+    margin-right: 15px; /* Space between logos */
+}
+
+.hackru-logo {
+    width: 150px; /* Increase the HackRU logo size slightly */
+}
+
+.project-title {
+    color: white; /* White color for the project title */
+    font-size: 1.5em; /* Adjust font size */
+    margin: 0 20px; /* Space around the title */
+    text-align: center; /* Center align the title */
+    flex-grow: 1; /* Allow the title to take up remaining space */
+    margin-left: -60px; /* Adjusted margin to shift left further */
+}
+
+.main-content {
+    margin-top: 50px; /* Space above the content */
+}
+
+h1 {
+    font-size: 3em; /* Increased font size for the title */
+    color: #80beff; /* Change to orangish-red color */
+    margin: 20px 0; /* Added margin for spacing */
+}
+
+p {
+    font-size: 1.5em; /* Increased font size for the description */
+    color: #CCCCCC; /* Light gray text color */
+    margin: 30px 0; /* Increased margin for spacing */
+}
+
+.age-label {
+    font-size: 1.5em; /* Increased font size for the label */
+    margin: 20px 0; /* Added margin for spacing */
+}
+
+.input-container {
+    display: flex; /* Align input and button */
+    flex-direction: column; /* Stack them vertically */
+    align-items: center; /* Center the elements */
+}
+
+.age-input {
+    padding: 12px; /* Increased padding for the input */
+    border: 1px solid #CCCCCC; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    margin: 20px 0; /* Increased margin around the input */
+    font-size: 1.2em; /* Increased font size for the input */
+    width: 250px; /* Set width for the input field */
+}
+
+.get-started {
+    display: inline-block; /* Make the link look like a button */
+    background-color: #007BFF; /* Blue background for the button */
+    color: white; /* White text color */
+    padding: 12px 24px; /* Increased padding for the button */
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 5px; /* Rounded corners for the button */
+    text-decoration: none; /* Remove underline */
+    font-size: 1.2em; /* Increased font size for the button */
+}
+
+.get-started:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
