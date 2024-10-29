@@ -1,0 +1,29 @@
+/*
+Programmed by: Umair Usmani
+*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px; /* Add margin to the body */
+    text-align: left; /* Align all text to the left */
+}
+
+h1 {
+    text-align: center; /* Center align the header */
+    color: #448af3; /* Set the heading color to #80beff */
+}
+
+.main-content {
+    margin-top: 20px; /* Space above the content */
+}
+
+.done-button {
+    background-color: #0d6acd; /* Green background for button */
+    color: white; /* White text for button */
+    padding: 10px 20px; /* Padding for the button */
+    font-size: 16px; /* Font size for the button */
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer cursor on hover */
+    display: block; /* Make button block-level */
+    margin-top: 20px; /* Margin on top for spacing */
+    
+}
