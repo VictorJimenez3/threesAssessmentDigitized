@@ -1,0 +1,25 @@
+<!-- Programmed by Umair Usmani -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    
+    <title>3s Table</title>
+</head>
+<body>
+    <h1>Number Table</h1>
+    <table id="number-table">
+        <tbody id="table-body">
+            <!-- Table content will be generated dynamically from JavaScript -->
+        </tbody>
+    </table>
+    
+    <button id="done-button" class="done-button" src="">Submit</button>
+    
+    <script src ="{{ url_for('static', filename='/buttons.js')}}"></script>
+
+</body>
+</html>
