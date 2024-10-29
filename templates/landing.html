@@ -1,0 +1,49 @@
+<!-- Programmed by Umair Usmani -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../static/landing.css"> <!-- Ensure correct path to CSS -->
+        <title>3s Spatial Awareness Test</title>
+        <script>
+            function validateAge() {
+                const ageInput = document.getElementById('age-input').value;
+                if (ageInput < 40) {
+                    alert("The patient is not eligible to take the test.");
+                    return false; // Prevent form submission
+                } else {
+                    window.location.href = "{{ url_for('home') }}"; // Correctly redirect to home.html if age is valid
+                    return false; // Prevent form submission
+                }
+            }
+        </script>
+    </head>
+    
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <div class="left-logos">
+                <img src="../static/rutgers_seal.png" alt="Rutgers University Seal" class="logo">
+                <img src="../static/njit_seal.svg" alt="NJIT Seal" class="logo">
+            </div>
+            <h2 class="project-title">Rutgers X NJIT HackRU Project</h2>
+            <img src="../static/HackRU.webp" alt="HackRU Logo" class="hackru-logo">
+        </div>
+    </header>
+
+    <main class="main-content">
+        <h1>3s Spatial Awareness Test</h1>
+        <p>This project assesses spatial recognition capabilities through various tasks.</p>
+        
+        <form onsubmit="return validateAge();">
+            <label for="age-input" class="age-label">Enter the patient's age:</label>
+            <div class="input-container">
+                <input type="number" id="age-input" class="age-input" required>
+                <button type="submit" class="get-started">Get Started</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
