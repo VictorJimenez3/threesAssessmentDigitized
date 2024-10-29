@@ -5,7 +5,7 @@ Programmed by Victor Jimenez & Matthew Tujague
 from flask import Flask, jsonify, render_template, request, url_for
 from flask_cors import CORS
 from pprint import pprint
-from hFunctions import *
+from parseTest import *
 
 from firebase import addTestToFirebase, retrieveAllTests, formatTestsToModel, trainModelToNewData
 
