@@ -1,0 +1,169 @@
+<!-- 
+Frontend by Umair Usmani 
+Middleware by Victor Jimenez
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3s Spreadsheet Test (Timed Scoring Sheet)</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src ="{{ url_for('static', filename='/buttons.js')}}"></script>
+</head>
+<body class="bg-light">
+
+    <div class="container my-5">
+        <h1 class="text-center mb-4">3s Spreadsheet Test (Timed Scoring Sheet)</h1>
+
+        <!-- Participant Info Section 
+        <div class="card mb-4">
+            <div class="card-body">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="participantId">Participant ID</label>
+                        <input type="text" class="form-control" id="participantId" placeholder="Enter ID here">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="participantInitials">Participant Initials</label>
+                        <input type="text" class="form-control" id="participantInitials" placeholder="Enter initials here">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="date">Date</label>
+                        <input type="date" class="form-control" id="date">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="examinerInitials">Examiner Initials</label>
+                        <input type="text" class="form-control" id="examinerInitials" placeholder="Enter initials here">
+                    </div>
+                </div>
+            </div>
+        </div>
+        -->
+        <!-- Time Section -->
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5>q. Time</h5>
+                <p>Time: 5:00 (min:sec) = 300 sec</p>
+            </div>
+        </div>
+
+        <!-- Column Crossed 3s Section -->
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5>r. Number of Crossed 3s in Each Column (Left vs. Right Side of Strings)</h5>
+                <div class="form-row">
+                    <!-- Placeholder for crossing counts in each column -->
+                    <div class="form-group col-md-1">
+                        <label for="column1">1)</label>
+                        <input type="text" class="form-control" id="column1" placeholder="L/R">
+                    </div>
+                    <div class="form-group col-md-1">
+                        <label for="column2">2)</label>
+                        <input type="text" class="form-control" id="column2" placeholder="L/R">
+                    </div>
+                    <div class="form-group col-md-1">
+                        <label for="column3">3)</label>
+                        <input type="text" class="form-control" id="column3" placeholder="L/R">
+                    </div>
+                    <div class="form-group col-md-1">
+                        <label for="column4">4)</label>
+                        <input type="text" class="form-control" id="column4" placeholder="L/R">
+                    </div>
+                    <div class="form-group col-md-1">
+                        <label for="column5">5)</label>
+                        <input type="text" class="form-control" id="column5" placeholder="L/R">
+                    </div>
+                    <div class="form-group col-md-1">
+                        <label for="column6">6)</label>
+                        <input type="text" class="form-control" id="column6" placeholder="L/R">
+                    </div>
+                    <div class="form-group col-md-1">
+                        <label for="column7">7)</label>
+                        <input type="text" class="form-control" id="column7" placeholder="L/R">
+                    </div>
+                    <div class="form-group col-md-1">
+                        <label for="column8">8)</label>
+                        <input type="text" class="form-control" id="column8" placeholder="L/R">
+                    </div>
+                    <div class="form-group col-md-1">
+                        <label for="column9">9)</label>
+                        <input type="text" class="form-control" id="column9" placeholder="L/R">
+                    </div>
+                    <div class="form-group col-md-1">
+                        <label for="column10">10)</label>
+                        <input type="text" class="form-control" id="column10" placeholder="L/R">
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- Quadrant Crossed 3s Section -->
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5>s. Number of Crossed 3s in Each Quadrant (Left vs. Right Side of Strings)</h5>
+                <div class="form-row">
+                    <div class="form-group col-md-3">
+                        <label for="upperLeft">Upper Left</label>
+                        <input type="text" class="form-control" id="upperLeft" placeholder="Left/Right">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="lowerLeft">Lower Left</label>
+                        <input type="text" class="form-control" id="lowerLeft" placeholder="Left/Right">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="upperRight">Upper Right</label>
+                        <input type="text" class="form-control" id="upperRight" placeholder="Left/Right">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="lowerRight">Lower Right</label>
+                        <input type="text" class="form-control" id="lowerRight" placeholder="Left/Right">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Summary Section -->
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5>Summary of Crossed 3s</h5>
+                <p>t. Total number of crossed 3s: <input type="text" class="form-control d-inline-block w-auto" placeholder="Value"></p>
+                <p>u. Total number of omissions: <input type="text" class="form-control d-inline-block w-auto" placeholder="Value"> = 120 - t</p>
+                <p>v. # of crossed 3s on Left side of the page: <input type="text" class="form-control d-inline-block w-auto" placeholder="Value"> = sum of Column 1 to 5</p>
+                <p>w. # of omissions on Left side of the page: <input type="text" class="form-control d-inline-block w-auto" placeholder="Value"> = 60 - v</p>
+                <p>x. # of crossed 3s on Right side of the page: <input type="text" class="form-control d-inline-block w-auto" placeholder="Value"> = sum of Column 6 to 10</p>
+                <p>y. # of omissions on Right side of the page: <input type="text" class="form-control d-inline-block w-auto" placeholder="Value"> = 60 - x</p>
+                <p>z. Page-centered omission: <input type="text" class="form-control d-inline-block w-auto" placeholder="Value"> = w - y</p>
+            </div>
+        </div>
+
+        <!-- String-Specific Crossed 3s Section -->
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5>String-Specific Crossed 3s</h5>
+                <p>aa. # of crossed 3s on Left side of individual strings: <input type="text" class="form-control d-inline-block w-auto" placeholder="Value"></p>
+                <p>bb. # of omissions on Left side of individual strings: <input type="text" class="form-control d-inline-block w-auto" placeholder="Value"> = 60 - aa</p>
+                <p>cc. # of crossed 3s on Right side of individual strings: <input type="text" class="form-control d-inline-block w-auto" placeholder="Value"></p>
+                <p>dd. # of omissions on Right side of individual strings: <input type="text" class="form-control d-inline-block w-auto" placeholder="Value"> = 60 - cc</p>
+                <p>ee. String-centered omission: <input type="text" class="form-control d-inline-block w-auto" placeholder="Value"> = bb - dd</p>
+            </div>
+        </div>
+
+        <a href="{{ url_for('timeseries_results') }}" id="done-button" class="btn btn-primary">Next Page</a>
+
+
+    </body>
+</html>
+        <!-- Instructions Section 
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5>Instructions</h5>
+                <ul>
+                    <li>Video record the participant from an aerial view (so you can see the paper) for the entirety of the task.</li>
+      -->
