@@ -6,6 +6,9 @@ This digitized form of the test allows those with Node access to take and submit
 
 ***CREDITS***
 Team Lead & Encryption Developer: Matthew Tujague
+
 AI/ML: Julian Vilfort
+
 Middleware & Backend: Victor Jimenez
+
 Frontend: Umair Usmani
