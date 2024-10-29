@@ -1,0 +1,49 @@
+<!-- 
+Frontend by Umair Usmani 
+Middleware by Victor Jimenez
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3s Timeseries Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='timeseries_results.css') }}">
+</head>
+<body>
+    <h1>3s Timeseries Results</h1>
+    
+    <!-- Table for displaying clickData from localStorage -->
+    <div id="tableContainer">
+        <table id="dynamicTable" border="1" cellpadding="8" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Checked</th>
+                    <th>Row</th>
+                    <th>Column</th>
+                    <th>Index</th>
+                    <th>Character</th>
+                    <th>Time (s)</th>
+                </tr>
+            </thead>
+            <tbody id="result-table-body">
+                <!-- Rows will be dynamically inserted here by displayData.js -->
+            </tbody>
+        </table>
+    </div>
+
+    <form action="{{ url_for('final_results') }}" method="get">
+        <button id="done-button" type="button">Done</button>
+    </form>
+
+    <!-- Import buttons.js and displayData.js -->
+    <script src="{{ url_for('static', filename='buttons.js') }}"></script>
+    <script src="{{ url_for('static', filename='displayData.js') }}"></script>
+    <script>
+        // Optional: alert when clicking "Done" button
+        document.getElementById('done-button').onclick = () => {
+            alert("You have completed the task!");
+        };
+    </script>
+</body>
+</html>
