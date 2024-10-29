@@ -1,0 +1,44 @@
+/*
+Programmed by: Umair Usmani
+*/
+
+body {
+    background-color: black; /* Set the background to black */
+    color: white; /* Set text color to white */
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    height: 100vh; /* Full height to center vertically */
+    display: flex; /* Use flexbox to center content */
+    flex-direction: column; /* Align items in a column */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+}
+
+h1 {
+    margin-top: 40px; /* Space above the title */
+    color: white; /* Make the title white */
+    font-size: 2.5em; /* Increase font size */
+}
+
+.button-container {
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    margin-top: 50px; /* Space above the button */
+}
+
+#done-button {
+    background-color: #007BFF;; /* Sky blue color */
+    color: white; /* White text color */
+    padding: 10px 20px; /* Padding for the button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    width: 240px; /* Set width to ensure it's one line */
+    font-size: 16px; /* Font size for better visibility */
+}
+
+#done-button:hover {
+    background-color: rgb(9, 9, 143); /* Darker blue on hover */
+}
