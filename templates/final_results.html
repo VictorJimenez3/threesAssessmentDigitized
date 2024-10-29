@@ -1,0 +1,62 @@
+<!-- Programmed by Umair Usmani -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='final_results.css') }}">
+    <style>
+        body {
+            background-color: black; 
+            color: white; 
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0; 
+            padding: 0; 
+            height: 100vh; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+        }
+        h1 {
+            font-size: 2.5em; /* Increase font size */
+            margin-top: 20px; /* Space above the title */
+            color: white; 
+        }
+        p {
+            margin: 20px 0; 
+            color: white; 
+        }
+        #done-button, #start-new-test {
+            background-color: rgb(0, 30, 128); 
+            color: white; 
+            padding: 10px 20px; 
+            border: none; 
+            border-radius: 5px; 
+            cursor: pointer; 
+            margin-top: 20px; 
+            width: 120px; 
+        }
+        #done-button:hover, #start-new-test:hover {
+            background-color: darkgreen; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Final Results of the Test</h1>
+    <p>Our test has indicated that you may have a spatial-motor cognitive impairment, you may want to seek professional advice.</p>
+    <button id="done-button">Submit</button>
+
+    <form action="{{ url_for('home') }}" method="get">
+        <button id="start-new-test" class="done-button">Start a new Test</button>
+    </form>
+
+    <script>
+        document.getElementById('done-button').onclick = () => {
+            alert("Thank you for your participation!");
+        };
+    </script>
+</body>
+</html>
