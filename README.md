@@ -44,7 +44,7 @@ The 3S Spatial Awareness Assessment is a research prototype. To run it:
 *Note: For demonstration and academic use only. Production deployment would require formal clinical review.*
 
 ## Links
-- [GitHub Repository](https://github.com/Binimal101/3sSpacialAwarenessAssessment)
+- [GitHub Repository](https://github.com/VictorJimenez3/threesAssessmentDigitized/)
 - [Devpost Project Page](https://devpost.com/software/3s-spacial-awareness-assessment)
 
 ## Copyright
