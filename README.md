@@ -31,8 +31,8 @@ The 3S Spatial Awareness Assessment is a research prototype. To run it:
 
 1. Clone the repository and install dependencies:
    
-       git clone https://github.com/Binimal101/3sSpacialAwarenessAssessment.git
-       cd 3sSpacialAwarenessAssessment
+       git clone https://github.com/VictorJimenez3/threesAssessmentDigitized.git
+       cd threesAssessmentDigitized
        pip install -r requirements.txt
 
 2. Launch the server:
